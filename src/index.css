@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f0f7ff; /* Light sky blue */
+    color: #0f172a; /* Deep slate */
+  }
+}
+
+/* Light Blue Bento Dot Pattern */
+.bg-bento-dots {
+  background-image: radial-gradient(circle at center, rgba(2, 132, 199, 0.14) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* 3D Card Elevation */
+.card-3d {
+  background: #ffffff;
+  border: 1px solid rgba(186, 230, 253, 0.85);
+  box-shadow: 0 12px 28px -4px rgba(2, 132, 199, 0.08), 0 4px 8px -2px rgba(2, 132, 199, 0.04), inset 0 1px 0 rgba(255, 255, 255, 1);
+  border-radius: 1.5rem;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-3d:hover {
+  box-shadow: 0 18px 36px -6px rgba(2, 132, 199, 0.13), 0 6px 12px -2px rgba(2, 132, 199, 0.06), inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* 3D Button Depth */
+.btn-3d-primary {
+  background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 0 0 #075985, 0 6px 14px rgba(2, 132, 199, 0.25);
+  border-radius: 0.75rem;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 0 #075985, 0 8px 18px rgba(2, 132, 199, 0.3);
+}
+
+.btn-3d-primary:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 0 #075985, 0 2px 6px rgba(2, 132, 199, 0.15);
+}
+
+/* 3D Secondary Button Depth */
+.btn-3d-secondary {
+  background: #ffffff;
+  border: 1px solid #bae6fd;
+  color: #0369a1;
+  box-shadow: 0 3px 0 0 #bae6fd, 0 4px 8px rgba(2, 132, 199, 0.08);
+  border-radius: 0.75rem;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-secondary:hover {
+  background: #f8fafc;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 0 #7dd3fc, 0 6px 12px rgba(2, 132, 199, 0.12);
+}
+
+.btn-3d-secondary:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 0 #7dd3fc, 0 2px 4px rgba(2, 132, 199, 0.08);
+}
+
+/* 3D Gauge & Bevels */
+.gauge-3d-bezel {
+  background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 50%, #bae6fd 100%);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.9), 0 8px 16px rgba(2, 132, 199, 0.12), inset 0 -2px 4px rgba(3, 105, 161, 0.2);
+}
+
+.tube-3d-water {
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.7) 0%, rgba(14, 165, 233, 0.9) 40%, rgba(2, 132, 199, 1) 60%, rgba(3, 105, 161, 0.8) 100%);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6), 0 0 12px rgba(14, 165, 233, 0.4);
+}
+
+/* Light Blue Neon Glow Accents */
+.glow-sky {
+  box-shadow: 0 0 18px rgba(14, 165, 233, 0.35);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
+}
+
+@keyframes hazard-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(225, 29, 72, 0.2), inset 0 0 8px rgba(225, 29, 72, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(225, 29, 72, 0.4), inset 0 0 18px rgba(225, 29, 72, 0.2);
+  }
+}
+
+.extreme-pulse-emergency {
+  animation: hazard-pulse 2s infinite ease-in-out;
+}
+
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.radar-sweep-anim {
+  animation: radar-sweep 4s linear infinite;
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-3d {
+  animation: float-gentle 4s ease-in-out infinite;
+}

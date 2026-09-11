@@ -1,0 +1,6 @@
+{
+  "name": "SmartWeather AI",
+  "description": "Hyper-local South African weather forecasting based in Boksburg, Gauteng, featuring runway 03/21 crosswind component calculator for O.R. Tambo (FAOR), cloud base altitude gauge, pilot safety log, and aviation flight weather predictions.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

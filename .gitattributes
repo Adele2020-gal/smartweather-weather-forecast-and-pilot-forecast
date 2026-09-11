@@ -1,0 +1,17 @@
+# Preserve line endings and enforce UTF-8 without conversion
+* text=auto eol=lf
+
+# Explicitly lock language detection for GitHub Linguist
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+*.css linguist-language=CSS linguist-detectable=false
+*.html linguist-detectable=false
+*.json linguist-documentation=true
+*.md linguist-documentation=true
+
+# Mark lock files, build configs, and metadata as generated/vendored
+bun.lock linguist-generated=true
+package-lock.json linguist-generated=true
+yarn.lock linguist-generated=true
+pnpm-lock.yaml linguist-generated=true
+metadata.json linguist-documentation=true
